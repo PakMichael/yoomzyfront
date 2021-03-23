@@ -1,0 +1,205 @@
+a.button,
+[type='submit'],
+blockquote p a,
+.button {
+    @extend %button-base;
+    background-color: $color__brand-primary;
+    color: #fff;
+    border-radius: 100px;
+    border-color: $color__brand-primary;
+    transition: box-shadow 400ms ease;
+
+    &.alt {
+        background-color: $color__brand-white;
+        color: $color__brand-primary;
+    }
+
+    &:hover,&:active {
+        box-shadow:0 0 0 4px rgba($color__brand-primary,0.3);
+    }
+
+    & + .button {
+        margin-left: 1rem;
+    }
+
+    &.button-alt {
+       background-color: $color__brand-white;
+       border-color: $color__brand-primary;
+       color: $color__brand-primary;
+    }
+
+    &.button-inverted {
+       background-color: $color__brand-white;
+       color: $color__brand-white;
+       border-color: $color__brand-white;
+    }
+
+    &.small {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+}
+
+.button-inverted {
+    @extend %button-base;
+    border-radius: 100px;
+    color: $color__brand-white;
+    border: 3px solid currentColor;
+    transition: box-shadow 400ms ease;
+
+    &:hover,&:active {
+        box-shadow:0 0 0 4px rgba(255,255,255,0.3);
+    }
+}
+
+.shadow-button {
+    background-size: contain;
+    display: inline-block;
+    padding: 1rem;
+    color: #fff;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    font-size: rem(30px);
+    min-width: rem(180px);
+    min-height: rem(162px);
+    transition: all 0.6s;
+    position: relative;
+    top: 0;
+
+    &:hover {
+        top: -0.5rem;
+    }
+
+    @media screen and (max-width: $size__mobile) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+a.add-button,
+footer button {
+    @extend %button-base;
+    color: $color__brand-primary;
+}
+
+
+.close {
+    border: none;
+    background-color: transparent;
+    float: right;
+}
+
+.button-small {
+    border: none;
+    background-color: transparent;
+    color: $color__brand-gray;
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition: color 300ms;
+    cursor: pointer;
+
+    &:hover,&:active {
+        color:$color__brand-primary;
+    }
+}
+
+
+.button-delete {
+    background-color: red;
+    border-color: red;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: $size__spacing/4;
+}
+
+.header-button {
+    background-color: $color__brand-secondary;
+    color: $color__brand-white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    padding: rem(10px) rem(20px);
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.menu-bg {
+    @include round-button($color__brand-secondary);
+    bottom: 2rem;
+    right: 2rem;
+
+    @media screen and (min-width: $size__mobile){
+        display: none;
+    }
+}
+
+.menu-toggle {
+    z-index: 999;
+    transition-delay: 1100ms;
+    height: 30px;
+    width: 50px;
+    color: $color__brand-logo;
+    border: none;
+    background: #fff;
+    outline: none;
+    position: relative;
+    border-left: 1px solid #EEEEEE;
+
+    span,
+    &::before,
+    &::after {
+        display: inline-block;
+        height: rem(3px);
+        min-height: 4px;
+        width: 30px;
+        background-color: currentColor;
+        vertical-align: middle;
+        transition: all .2s ease-in-out;
+        transform-origin:center;
+        border-radius: 2px;
+        left: 10px;
+        position: absolute;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+    }
+
+    span {
+        margin-top: -1px;
+    }
+
+    &::before{
+        top: 6px;
+    }
+
+    &::after{
+        bottom: 4px;
+    }
+
+   .toggled & {
+        transition-delay:0ms;
+        transition-duration: 0ms;
+
+        box-shadow: none;
+
+        span{
+            opacity: 0;
+        }
+
+        &::before{
+            top: 11px;
+            transform: rotate(45deg);
+        }
+
+        &::after{
+            bottom: 15px;
+            transform: rotate(-45deg);
+        }
+    }
+}

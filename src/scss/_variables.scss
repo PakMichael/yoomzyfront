@@ -1,0 +1,134 @@
+
+/*  Structure */
+$size__site-width: 1350px;
+$size__tablet: 796px;
+$size__large-tablet: 960px;
+$size__small-tablet: 680px;
+$size__header-width: 1700px;
+$size__mobile: 740px;
+$size__tablet: 23em;
+
+$size__grid-container: 1130px;
+$size__grid-main-column: 1130px/2;
+$size__container: $size__grid-main-column*2;
+
+$size__content-margin: 2rem;
+$size__content-padding: 5rem;
+
+$size__mobile-padding-right: 1rem;
+$size__mobile-padding-left: 1rem;
+
+$size__grid-gap: 2rem;
+$spacing: 5.06rem;
+$size__spacing: $spacing;
+$size__mobile-spacing: 3rem;
+
+/*  Fonts     */
+$font__main: 'IBM Plex Sans';
+$font__main-weight: normal;
+$font__headings: 'IBM Plex Sans';
+$size__text-body: 16px;
+$size__text-body-lineheight: 22px;
+
+$size__text-body-small: 11px;
+
+//font-style font-variant font-weight font-size/line-height font-family
+$font__main-shorthand: normal 300 $font__main-weight 1rem/1.7  $font__main;
+
+$size__border-radius: 10px;
+
+// brand
+$color__brand-logo: #E74335;
+$color__brand-primary: #E74335;
+$color__brand-red: #D81E0E;
+$color__brand-green: #00A536;
+$color__brand-secondary: #FFBC07;
+$color__brand-gray: #4A4A4A;
+$color__brand-darkgray: #2D2D2D;
+$color__brand-lightgray: #BABABA;
+$color__brand-lightgray: #eAeAeA;
+$color__brand-white: #fff;
+
+$box__shadow-default: 0 0 19px rgba(0,0,0,0.06);
+
+// backgrounds
+$color__background-main: #fff;
+$color__inputs: #E7E7E7;
+$color__background-odd: #F7F7F7;
+$color__background-even: #FCFCFC;
+$color__background-yellow: $color__brand-primary;
+$color__background-side-menu: #fcfcfc;
+$color__background-paralax: #fafafa;
+
+// text
+$color__text-screen:    #2D2D2D;
+$color__text-headings:  #2D2D2D;
+$color__text-headings-h1 : $color__text-headings;
+$color__text-headings-h2 : $color__text-headings;
+$color__text-headings-h3 : $color__text-headings;
+$color__text-headings-h4 : $color__text-headings;
+$color__text-headings-h5 : $color__text-headings;
+$color__text-headings-h6 : $color__text-headings;
+
+
+// Heading
+$size__text-headings-h1 : 48px;
+$size__lineheight-headings-h1: 48px;
+
+$size__text-headings-h2 : 35px;
+$size__lineheight-headings-h2: 42px;
+
+$size__text-headings-h3 : 30px;
+$size__lineheight-headings-h3: 34px;
+
+$size__text-headings-h4 : 22px;
+$size__lineheight-headings-h4: 27px;
+
+$size__text-headings-h5 : 18px;
+$size__lineheight-headings-h5: 28px;
+
+$size__text-headings-h6 : 18px;
+$size__lineheight-headings-h6: 28px;
+
+$color__text-main : #121212;
+$color__text-light: #B3B3B3;
+$color__text-footer : #fff;
+$color__text-selection : #121212;
+$color__text-light: #878787;
+
+$color__border-navbar-main : #D5D5D5;
+$color__border-categories : #D4D4D4;
+
+// links
+$color__link-main: $color__brand-primary;
+$color__link-footer: $color__text-footer;
+$color__link-telephone : #a7a7a7;
+$color__link-telephone-main : #4f4f4f;
+
+$color__link-alternative: #898989;
+
+$color__background-table : #E8E8E8;
+$color__even-table : #F2F2F2;
+$color__border-table : #E7E7E7;
+$color__border-bodyrow : #A7A7A7;
+
+$color__text-table-heading : #222;
+
+// forms
+$color__border-input: #E5E5E6;
+$color__border-input-focus: $color__brand-secondary;
+
+// boxes
+$color__border-box: #E5E5E6;
+$color__background-box: #fff;
+
+
+$color__border: #e0e0e0;
+
+:root{
+  	--brand-blue: #003754;
+  	--brand-white: #fff;
+  	--brand-orange: #FF8000;
+	--brand-gray: #878787;
+	--brand-lightgray: #F8F8F8;
+}

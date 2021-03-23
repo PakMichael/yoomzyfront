@@ -1,0 +1,120 @@
+label {
+    font-weight: bold;
+    // color: $color__brand-primary;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 0.86rem;
+
+    &.legal {
+        line-height: 1.5;
+        text-transform: none;
+        font-size: 0.58rem;
+        font-weight: normal;
+        display: inline-block;
+        color: var(--brand-gray);
+
+        a {
+            font-size: inherit;
+            font-weight: bold;
+
+        }
+    }
+
+}
+
+input {
+    &,
+    &[type=text],
+    &[type=password],
+    &[type=phone],
+    &[type=url],
+    &[type=date],
+    &[type=email]{
+        @extend %input;
+    }
+}
+
+input[type='color'] {
+    padding: 0;
+    min-width: unset;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+textarea {
+    @extend %input;
+    width: 100%;
+}
+
+select {
+    @extend %input;
+}
+
+.fieldset.inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 54em;
+
+    p + p {
+        margin-left: 2rem;
+    }
+}
+
+
+.inline-fields {
+    display: flex;
+
+    input {
+        border-bottom-left-radius: 100px;
+        border-top-left-radius: 100px;
+        border-right: none;
+
+        &[type=submit] {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}
+
+input[type=checkbox],
+input[type=radio] {
+    position: absolute;
+    z-index: 0;
+
+    & + label {
+        padding-left: 30px;
+        @include before-content;
+
+        &:before, &:after {
+            position: absolute;
+            left: 0;
+            background-color: #fff;
+            display: inline-block;
+            top: 0;
+        }
+
+        &:before {
+            width: 30px;
+            height: 30px;
+            left: -10px;
+        }
+
+        &:after {
+            border-radius: 2px;
+            border: 1px solid $color__brand-primary;
+            height: 15px;
+            width: 15px;
+            transition: background-color 300ms ease;
+        }
+    }
+
+    &:checked + label:after {
+        background-color: $color__brand-secondary;
+    }
+}
+
+input[type=radio] + label:after {
+    border-radius: 50%;
+}
